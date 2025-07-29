@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content= content= "width=device-width, initial-scale=.1.0">
+  <title>Profile Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="profile-card">
+    <img src="https://via.placeholder.com/150" alt="Profile Picture" class+"profile-img">
+    <h2 class="name">John Doe</h2>
+    <p class="title">Web Developer</p>
+    <p class="bio">Passionate about coding and creating beautiful web experiences.</p>
+  </div>  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </body>
+</html>
