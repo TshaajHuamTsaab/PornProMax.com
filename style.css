@@ -1,44 +1,61 @@
 body {
+  font-family: Arial, sans-serif;
   background: #f4f4f4;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
 }
 
-.profile-card {
+.login-container {
   background: #fff;
-  border: 3px solid #3498db; /* Styled border */
-  border-radius: 10px;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   width: 300px;
-  padding: 20px;
+}
+
+h2 {
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
 }
 
-.profile-img {
-  border-radius: 50%;
-  border: 4px solid #3498db;
-  width: 100px;
-  height: 100px;
-  margin-bottom: 15px;
+.form-group {
+  margin-bottom: 1rem;
 }
 
-.name {
-  font-size: 1.5em;
+label {
+  display: block;
+  margin-bottom: 0.5rem;
   font-weight: bold;
-  color: #2c3e50;
 }
 
-.title {
-  font-size: 1em;
-  color: #777;
-  margin-bottom: 10px;
+input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
 }
 
-.bio {
-  font-size: 0.9em;
-  color: #555;
+button {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  background: #007bff;
+  color: white;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
+button:hover {
+  background: #0056b3;
+}
+
+#error-message {
+  color: red;
+  text-align: center;
+  margin-top: 1rem;
+}
