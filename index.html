@@ -1,42 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content= content= "width=device-width, initial-scale=.1.0">
-  <title>Profile Card</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="profile-card">
-    <img src="https://via.placeholder.com/150" alt="Profile Picture" class+"profile-img">
-    <h2 class="name">John Doe</h2>
-    <p class="title">Web Developer</p>
-    <p class="bio">Passionate about coding and creating beautiful web experiences.</p>
-  </div>  
-</body>
-</html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>小辉</title>
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="backdrop" aria-hidden="true"></div>
+    <div class="blob" aria-hidden="true"></div>
+    <div class="blob" aria-hidden="true"></div>
 
+    <main class="wrapper">
+      <section class="card" role="region" aria-labelledby="login-title">
+        <header>
+          <h1 id="login-title">欢迎光临👋</h1>
+          <p class="lead">Sign in to continue to your dashboard</p>
+        </header>
 
+        <form id="loginForm" novalidate>
+          <div class="field">
+            <label for="email">Email</label>
+            <div class="input-wrap">
+              <input id="email" name="email" type="email" inputmode="email" autocomplete="username" placeholder="you@example.com" required />              
+            </div>
+            <div class="error" id="email-error" aria-live="polite"></div>
+          </div>
+          
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="input-wrap">
+              <input id="password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" minlength="6" required />
+              <button class="toggle-pass" type="button" aria-label="Show password" aria-pressed="false" title="Show/Hide password">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12Z" stroke="currentColor" stroke-width="2"/>
+                  <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </button>
+            </div>
+            <div class="error" id="password-error" aria-live="polite"></div>
+          </div>
 
+          <div class="row">
+            <label class="checkbox"><input id="remember" type="checkbox"> Remember me</label>
+            <a class="link" href="#" onclick="alert('Password reset not wired up in this demo 🙂'); return false;">Forgot password?</a>
+          </div>
 
+          <button class="btn" id="submit-btn" type="submit">Sign in</button>
+          <!-- ✅ Fixed: signup now wired -->
+          <button class="btn btn-secondary" type="button" onclick="createAccount()">Sign up</button>
 
+          <div class="divider"><span>or continue with</span></div>
+          <div class="socials">
+            <button type="button" aria-label="Continue with Google">Google</button>
+            <button type="button" aria-label="Continue with GitHub">GitHub</button>
+            <button type="button" aria-label="Continue with Facebook">Facebook</button>
+          </div>
+        </form>
+      </section>
+    </main>
 
+    <div class="notice">By continuing, you agree to our Terms & Privacy Policy.</div>
+    <div id="toast" class="sr-only" role="status" aria-live="polite"></div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- </body>
+    <!-- Firebase app logic -->
+    <script type="module" src="app.js"></script>
+  </body>
 </html>
